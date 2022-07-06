@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Cadastro</title>
+</head>
+<body>
+    <main>
+        <div class="mensagem">
+            <div class="texto">
+                <h1>Bem vindo a minha plataforma de cadastro!</h1>
+                <h3><blockquote><cite>Junte-se a nós nessa jornada da tecnologia!</cite></blockquote></h3>
+                <h4>Sempre investindo nas melhores linguagens de programação front-end e back-end que o mercado fornece</h4>
+                <input type="submit" value="SIGN UP">
+            </div>
+        </div>
+        <div class="cadastro">
+            <div class="form">
+                <h2>Formulário de estagiários</h2>
+                <p>Nome Completo: <input type="text" name="Nome-Completo" placeholder="Nome Completo"></p><br>
+                <p>Endereço: <input type="text" name="Endereço" placeholder="Endereço"></p><br>
+                <p>Telefone para contato: <input type="tel" name="Contato" placeholder="Contato" id="contato"></p><br>
+                <p>Email: <input type="email" name="email" id="email" placeholder="Email"></p><br>
+                <p>CPF: <input type="text" name="cpf" id="cpf" placeholder="CPF"></p><br>
+                <p>Por que você quer entrar na minha empresa?<input type="text" name="Descrição" placeholder="Descrição" class="desc"></p><br>
+                <p><button>JOIN</button></p>
+                
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script>
+    $("#contato").mask("(00) 00000-0000");
+    $('#email').mask("A", {
+    translation: {
+        "A": { pattern: /[\w@\-.+]/, recursive: true }
+    }
+});
+$("#cpf").mask("000.000.000-00");
+</script>
+</html>
